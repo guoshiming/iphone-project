@@ -32,6 +32,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshed:) name:Notification_TabClick object:nil];
 }
+//接收双击通知
 - (void)refreshed:(NSNotification *)notification
 {
     if (notification.object) {

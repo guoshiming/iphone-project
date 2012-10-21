@@ -25,7 +25,7 @@
     //设置 UserAgent
     [ASIHTTPRequest setDefaultUserAgentString:[NSString stringWithFormat:@"%@/%@", [Tool getOSVersion], [Config Instance].getIOSGuid]];
     
-    //显示系统托盘
+    //显示系统托盘()
     [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     
     //检查网络是否存在 如果不存在 则弹出提示
@@ -39,16 +39,16 @@
     self.postBase = [[PostBase alloc] initWithNibName:@"PostBase" bundle:nil];
     UINavigationController * postNav = [[UINavigationController alloc] initWithRootViewController:self.postBase];
     
-    //动态页;
+    //动态页(我的);
     self.profileBase = [[ProfileBase alloc] initWithNibName:@"ProfileBase" bundle:nil];
     UINavigationController * profileNav = [[UINavigationController alloc] initWithRootViewController:profileBase];
     
-    //设置页 
+    //设置页(更多) 
     self.settingView = [[SettingView alloc] initWithNibName:@"SettingView" bundle:nil];
     UINavigationController * settingNav = [[UINavigationController alloc] initWithRootViewController:self.settingView];
     settingNav.navigationBarHidden = NO;
     
-    //新闻页
+    //新闻页(综合)
     self.newsBase = [[NewsBase alloc] initWithNibName:@"NewsBase" bundle:nil];
     UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:self.newsBase];
     
